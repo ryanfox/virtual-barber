@@ -1,0 +1,25 @@
+function images = warpToCanvas(imgs, imgs_cp, canvas, canvas_cp, masks)
+
+length = size(imgs, 2);
+
+images = cell(1,length);
+
+for i = 1:length
+    tform = cp2tform(imgs_cp(:,:,i), canvas_cp, 'polynomial');
+    img = imtransform(imgs{i}, tform, 'Size', [94 92]);
+    xMin = Inf; yMin = Inf;
+    for j=1:size(img,1)
+        for k=1:size(img,2)
+            if img(j,k,1)+img(j,k,2)+img(j,k,3) > 0
+                if j < yMin
+                    yMin = j;
+                end
+                if k < xMin
+                    xMin = k;
+                end
+            end
+        end
+    end
+    
+    
+end

@@ -1,0 +1,46 @@
+function shavedFace = iterative(infile, filter)
+
+load nonbeardsubspace;
+load init;
+load images;
+
+% number of iterations in loop
+num = 10;
+
+if isKey(processedImages, 'infile')
+    face = values(processedImages, 'infile');
+else
+    inFile = imread(infile);
+    [face, tform, in] = loadInput(inFile, img, cp);
+    
+    processedImages(infile) = face;
+    save images processedImages
+
+    x = reshape(face, 26505, 1, 1);
+    x = double(x);
+
+    V = double(nonbeardsubspace);
+    W = ones(26505, 1, 'single');
+
+    for k=1:num
+
+        c = (V'*diag(W.^2)*V)\V'*diag(W.^2)*x;
+        xstar = V*c;
+
+        sigma = 1.4826 * median(abs(x-xstar));
+        e = x - V*c;
+        for i=1:26505
+            W(i) = sigma^2/(e(i)^2 + sigma^2)^2;
+        end
+        disp(strcat('Iteration ', int2str(k), ' of ', int2str(num), ' complete.'));
+    end
+
+    xstar = reshape(xstar, 95, 93, 3);
+    
+    face = uint8(devectorized);
+    
+    processedImages(infile) = face;
+    save images processedImages
+end
+    
+shavedFace = applyBeardFilter(inFile, xStar, filter);

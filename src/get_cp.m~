@@ -1,0 +1,11 @@
+num_imgs = size(nb_names, 2);
+
+[input_points, base_points] = cpselect(nb_names{2}, nb_names{1}, 'Wait', true);
+
+all_cp = zeros(size(base,1), 2, size(nb_names, 2));
+
+all_cp(:,:,1) = base;
+all_cp(:,:,2) = input;
+
+for i=3:size(all_cp,3)
+    

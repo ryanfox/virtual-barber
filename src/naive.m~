@@ -1,0 +1,23 @@
+function shavedFace = naive(infile, filter)
+
+load nonbeardsubspace;
+load init;
+load facialHair;
+load images
+
+if isKey(processedImages, 'infile')
+    face = 
+    
+inFile = imread(infile);
+
+face = loadInput(infile, img, cp);
+
+vectorized = reshape(face, 26505, 1, 1);
+vectorized = double(vectorized);
+solution = nonbeardsubspace*((nonbeardsubspace'*nonbeardsubspace)\nonbeardsubspace'*vectorized);
+
+devectorized = reshape(solution, 95, 93, 3);
+
+face = uint8(devectorized);
+
+shavedFace = applyBeardFilter(infile, face, filter);

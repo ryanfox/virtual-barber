@@ -1,0 +1,176 @@
+			/* HTML Tags */
+			a:link { 
+				color:#14DB46;
+				text-decoration:none;
+			}
+
+			a:visited { 
+				color:#14DB46;
+				text-decoration:none;
+			}
+				
+			a:hover {
+				color:white;
+				text-decoration:underline;
+			}
+
+			
+			body{
+				color:white;
+				background-color:grey;
+				margin:0px;
+			}
+			
+			h1 {
+				margin:0px;
+			}
+			
+			h2 {
+				margin:0px;
+			}
+			
+			h3 {
+				margin:0px;
+			}
+			
+			h4 {
+				margin:0px;
+			}
+			
+			p {
+				margin:0px;
+				padding-left:5px;
+				padding-right:5px;
+				padding-top:5px;
+				padding-bottom:5px;
+			}
+			
+			img {
+				padding:10px;
+			}
+			
+			/* Div IDs */
+			
+			#banner {
+				position:relative;
+				background-color:black;
+				color:white;
+				border:solid;
+				border-color:white;
+				padding-bottom:3px;
+			}
+
+			#leftColumn {
+			padding:10px;
+			width:330px;
+			float:left;
+			overflow:auto;
+			}
+		
+			#rightColumn {
+				padding:10px;
+				width:330px;
+				float:right;
+				overflow:auto;
+			}
+			
+			#container {
+				background-color:white;
+				color:black;
+				margin-left:auto;
+				margin-right:auto;
+				overflow:hidden;
+				width:710px;
+				border:solid;
+				font-size:14px;
+			}	
+					
+			#footer {
+				clear:both;
+				width:700px;
+				color:#14BD46;
+				background-color:black;
+				text-align:center;
+				height:16px;
+				font-size:14px;
+			}
+
+			#header h1{
+				margin:0px;
+				padding-left:16px;
+				font-size:30px;
+				color:white;
+			}
+			
+			#header h2{
+				margin:0px;
+				padding-left:24px;
+				font-size:16px;
+				color:#14DB46;
+			}
+			
+			#report {
+				font-size:16px;
+			}
+			
+			#report h1{
+				padding-left:5px;
+				padding-top:5px;
+				font-size:24px;
+				color:black;
+				font-weight:bold;
+			}
+			
+			#report h2{
+				padding-left:10px;
+				padding-top:5px;
+				font-size:18px;
+				color:black;
+				font-weight:bold;
+			}
+			
+			#report a:link { 
+				color:#14DB46;
+				text-decoration:none;
+				font-size:16px;
+			}
+
+			#report a:visited { 
+				color:#14DB46;
+				text-decoration:none;
+			}
+				
+			#report a:hover {
+				color:#14DB46;
+				text-decoration:underline;
+			}
+
+			
+			#list {
+				margin:0px;
+				padding-left:5px;
+				padding-right:5px;
+				color:black;
+			}
+			
+			#listHeader {
+				color:black;
+				font-weight:bold;
+				margin:0px;
+				padding-bottom:2px;
+			}
+			
+			#nav {
+				position:absolute;
+				top:10px;
+				right:10px;
+				background-color:black;
+				color:white;
+				text-align:center;
+				height:20px;
+				alight:right;
+			}
+			
+			#topPic {
+				float:right;
+			}

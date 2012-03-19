@@ -1,0 +1,31 @@
+function face = removeBeard(image, processing, style)
+%
+%
+%image: string file path to bearded face image
+%processing: 'naive' or 'iterative'
+
+switch(style)
+    case ['clean', 'none'}
+        shave_style = clean;
+    case 'moustache'
+        shave_style = moustache;
+    case 'goatee'
+        shave_style = goatee;
+    case 'vandyck'
+        shave_style = vandyck;
+    case 'soulPatch'
+        shave_style = soulPatch;
+    case 'fuManchu'
+        shave_style = fuManchu;
+   
+end
+
+if processing == 'naive'
+    face = naive(image, shave_style);
+elseif processing == 'iterative'
+    face = iterative(image, shave_style);
+else
+    error('Invalid command. Try again or call "help removeBeard" for more info');
+end
+
+end

@@ -1,0 +1,2 @@
+rawImageVars;
+get_cp;

@@ -1,0 +1,1 @@
+nb_names = {'nb/04006.jpg', 'nb/04007.jpg', 'nb/04008.jpg'};

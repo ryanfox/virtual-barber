@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<link rel="StyleSheet" href="Virtual%20Barber_files/main.css" type="text/css" media="all">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Virtual Barber</title>
+</head>
+
+<body>
+<div id="container">
+	<div id="banner">
+        <div id="header"><h1>Virtual Barber</h1>
+            <h2>Tyler Ambroziak and Ryan Fox</h2>
+            <h2>CS 638-1: Computational Photography</h2>
+            <h2>Spring 2010</h2>
+        </div> <!-- end header div -->
+        
+        <div id="nav">
+            <a href="http://pages.cs.wisc.edu/%7Eambrozia/virtualBarber/contents/paper.pdf">Paper</a> | 
+            <a href="http://pages.cs.wisc.edu/%7Eambrozia/virtualBarber/contents/presentation.pptx"> Presentation</a> | 
+            <a href="http://pages.cs.wisc.edu/%7Eambrozia/virtualBarber/contents/code.zip"> Code</a>
+        </div> <!-- end nav div -->
+	</div> <!-- end banner div -->
+	<div id="report">
+        <div id="topPic"><img src="Virtual%20Barber_files/example.jpg" width="150px"></div>
+        <h1>Abstract</h1>
+        <p>What would you look like without a beard? Or how about with a
+ different type of beard? Think of the beards as a layer on top of the 
+face rather than part of the face itself. Using techniques developed by 
+Nguyen, Lalonde, Efros, and De la Torre, the beard layer can be 
+automatically removed by estimating a beardless face from a database of 
+beardless faces. To refine the image synthesis, you can then using the 
+differences between the original and synthesized images to define a 
+beard layer mask. To examine less drastic measures, we extended the 
+paper's techniques to include "style filters" which leave part of the 
+beard intact by masking only parts of the beard layer. Some applications
+ of this technique include helping match pictures of wanted persons who 
+may have changed their appearance or helping men choose a facial hair 
+style that fits their personality.</p>
+       	<p>This project is based off of the paper <a href="http://graphics.cs.cmu.edu/projects/imageshaving/">"Image-based Shaving"</a> by Nguyen, Lalonde, Efros, and De la Torre with some modifications. All code is original and was done in Matlab.</p>
+        
+        <h1>Results:</h1>
+      	<h2>Source vs. Naive vs. Robust</h2>
+        <img src="Virtual%20Barber_files/before4i.jpg"><img src="Virtual%20Barber_files/after4n.jpg"><img src="Virtual%20Barber_files/4-clean.jpg">
+        <br><img src="Virtual%20Barber_files/before5i.jpg"><img src="Virtual%20Barber_files/after5n.jpg"><img src="Virtual%20Barber_files/5-clean.jpg">
+        <br><img src="Virtual%20Barber_files/before6i.jpg"><img src="Virtual%20Barber_files/after6n.jpg"><img src="Virtual%20Barber_files/6-clean.jpg">
+        <br><img src="Virtual%20Barber_files/before7i.jpg"><img src="Virtual%20Barber_files/after7n.jpg"><img src="Virtual%20Barber_files/7-clean.jpg">
+        <h2>Style Filtering (with Naive Algorithm)</h2>
+        <p>(Clean, Moustache, Goatee, Vandyck, Fu Manchu, Soul Patch)</p>
+        <img src="Virtual%20Barber_files/1-clean.jpg">
+        <img src="Virtual%20Barber_files/1-moustache.jpg">
+        <img src="Virtual%20Barber_files/1-goatee.jpg">
+        <img src="Virtual%20Barber_files/1-vandyck.jpg">
+        <img src="Virtual%20Barber_files/1-fuManchu.jpg">
+        <img src="Virtual%20Barber_files/1-soulPatch.jpg">
+        <br>
+        <img src="Virtual%20Barber_files/2-clean.jpg">
+        <img src="Virtual%20Barber_files/2-moustache.jpg">
+        <img src="Virtual%20Barber_files/2-goatee.jpg">
+        <img src="Virtual%20Barber_files/2-vandyck.jpg">
+        <img src="Virtual%20Barber_files/2-fuManchu.jpg">
+        <img src="Virtual%20Barber_files/2-soulPatch.jpg">
+        <br>
+        <img src="Virtual%20Barber_files/3-clean.jpg">
+        <img src="Virtual%20Barber_files/3-moustache.jpg">
+        <img src="Virtual%20Barber_files/3-goatee.jpg">
+        <img src="Virtual%20Barber_files/3-vandyck.jpg">
+        <img src="Virtual%20Barber_files/3-fuManchu.jpg">
+        <img src="Virtual%20Barber_files/3-soulPatch.jpg">
+        <br>
+        <h2>Style Filtering (with Robust Algorithm)</h2>
+        <p>(Clean, Moustache, Goatee, Vandyck, Fu Manchu, Soul Patch)</p>        
+        <img src="Virtual%20Barber_files/4-clean.jpg">
+        <img src="Virtual%20Barber_files/4-moustache.jpg">
+        <img src="Virtual%20Barber_files/4-goatee.jpg">
+        <img src="Virtual%20Barber_files/4-vandyck.jpg">
+        <img src="Virtual%20Barber_files/4-fuManchu.jpg">
+        <img src="Virtual%20Barber_files/4-soulPatch.jpg">
+        <br>
+        <img src="Virtual%20Barber_files/5-clean.jpg">
+        <img src="Virtual%20Barber_files/5-moustache.jpg">
+        <img src="Virtual%20Barber_files/5-goatee.jpg">
+        <img src="Virtual%20Barber_files/5-vandyck.jpg">
+        <img src="Virtual%20Barber_files/5-fuManchu.jpg">
+        <img src="Virtual%20Barber_files/5-soulPatch.jpg">
+        <br>
+        <img src="Virtual%20Barber_files/6-clean.jpg">
+        <img src="Virtual%20Barber_files/6-moustache.jpg">
+        <img src="Virtual%20Barber_files/6-goatee.jpg">
+        <img src="Virtual%20Barber_files/6-vandyck.jpg">
+        <img src="Virtual%20Barber_files/6-fuManchu.jpg">
+        <img src="Virtual%20Barber_files/6-soulPatch.jpg">
+        <br>
+        <img src="Virtual%20Barber_files/7-clean.jpg">
+        <img src="Virtual%20Barber_files/7-moustache.jpg">
+        <img src="Virtual%20Barber_files/7-goatee.jpg">
+        <img src="Virtual%20Barber_files/7-vandyck.jpg">
+        <img src="Virtual%20Barber_files/7-fuManchu.jpg">
+        <img src="Virtual%20Barber_files/7-soulPatch.jpg">
+  </div> <!-- end report div -->
+    
+</div> <!-- end container div -->
+
+
+</body></html>
